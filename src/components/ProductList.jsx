@@ -38,7 +38,7 @@ function ProductList({ products, search, darkMode }) {
             <motion.div
               key={product.id}
               whileHover={{ scale: 1.03 }}
-              className="motion-card"
+              className=  {`motion-card ${darkMode ? "dark" : "light"}`}
             >
               <ProductCard 
                 product={product} 

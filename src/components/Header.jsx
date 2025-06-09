@@ -37,23 +37,56 @@
 
 // export default Header;
   
-import { FaSun, FaMoon } from "react-icons/fa"; // Import icons
+// import { FaSun, FaMoon } from "react-icons/fa"; // Import icons
+
+// function Header({ search, setSearch, darkMode, setDarkMode }) {
+//   return (
+//     <header className={`header ${darkMode ? "dark" : "light"}`}>
+//       <div className="logo">ShopKaro</div>
+      
+//       <div className="search-container">
+//         <input
+//           type="text"
+//           placeholder="Search products..."
+//           value={search}
+//           onChange={(e) => setSearch(e.target.value)}
+//         />
+//       </div>
+
+//       {/* Dark/Light Mode Toggle Button */}
+//       <button 
+//         className="theme-toggle"
+//         onClick={() => setDarkMode(!darkMode)}
+//         aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+//       >
+//         {darkMode ? <FaSun /> : <FaMoon />}
+//       </button>
+//     </header>
+//   );
+// }
+
+// export default Header;
+
+// Attempt to toggle dark light mode
+import { FaSun, FaMoon } from "react-icons/fa";
 
 function Header({ search, setSearch, darkMode, setDarkMode }) {
   return (
     <header className={`header ${darkMode ? "dark" : "light"}`}>
-      <div className="logo">ShopKaro</div>
+       <h1 className="logo">ShopKaro</h1>
+       
+
       
-      <div className="search-container">
+  <div className="search-container">
         <input
           type="text"
           placeholder="Search products..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          className="search-input"
         />
       </div>
 
-      {/* Dark/Light Mode Toggle Button */}
       <button 
         className="theme-toggle"
         onClick={() => setDarkMode(!darkMode)}

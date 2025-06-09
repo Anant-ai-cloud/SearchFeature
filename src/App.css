@@ -16,9 +16,13 @@ header {
   border-bottom: 1px solid #444;
 }
 
-header h1 {
-  font-size: 28px;
+header h1 .dark{
+  font-size: 20px;
   color: #f4a261;
+}
+header h1 .light{
+  font-size: 20px;
+  color: #15120f;
 }
 
 header input[type="text"] {
@@ -99,4 +103,112 @@ header input[type="text"] {
 .product-card p {
   color: #f4a261;
   font-size: 14px;
+}
+
+
+
+/* Add these to your existing App.css */
+
+/* Base app styles */
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #eeb27b;
+}
+
+/* Header styles */
+.header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.header.dark {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #444;
+}
+
+.header.light {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo .dark {
+  font-size: 28px;
+  color: #dcd7d3;
+  margin: 0;
+}
+.logo .light {
+  font-size: 28px;
+  color: #1a1613;
+  margin: 0;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.header.dark .search-input {
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.header.light .search-input {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #f4a261;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Update existing product card styles for light mode */
+.app.light .product-card {
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.app.light .product-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app.light .product-card h3 {
+  color: #333;
+}
+
+.app.light .sidebar {
+  border-right: 1px solid #ddd;
+}
+
+.app.light .sidebar h3 {
+  color: #333;
 }

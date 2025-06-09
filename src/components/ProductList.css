@@ -16,12 +16,12 @@
 
 .sidebar.dark {
   background: #1e1e1e;
-  color: #e0e0e0;
+  color: #c13f3f;
 }
 
 .sidebar.light {
-  background: #0e0202;
-  color: #b71313;
+  background: #f0efef;
+  color: #060101;
 }
 
 /* Product Grid Styles */

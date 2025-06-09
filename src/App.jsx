@@ -191,11 +191,21 @@ function App() {
   }
 ];
 
-  return (
-    <div>
-      <Header search={search} setSearch={setSearch}     darkMode={darkMode}
-        setDarkMode={setDarkMode}   />
-      <ProductList products={products} search={search} />
+
+
+return (
+    <div className={`app ${darkMode ? "dark" : "light"}`}>
+      <Header 
+        search={search} 
+        setSearch={setSearch}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
+      <ProductList 
+        products={products} 
+        search={search}
+        darkMode={darkMode}
+      />
     </div>
   );
 }
